@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#245c50">
+<title>Die Keksbäckerei</title>
+<style>
+:root{--ink:#302c25;--green:#245c50;--cream:#faf5e9;--muted:#74695a;--orange:#a64729;--line:#dfd3be;--cookie:56px}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:disabled{cursor:default;opacity:.45}button:focus-visible{outline:4px solid #1681b1;outline-offset:4px}h1,h2,p{margin:0}button,h1,h2,.counter{user-select:none;-webkit-user-select:none}.awning{height:18px;background:repeating-linear-gradient(90deg,var(--green) 0 42px,#e8e7d4 42px 84px);border-bottom:4px solid #d1c6ae}main{max-width:1200px;margin:auto;padding:22px 28px 24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px}.brand-icon{background:var(--green);color:var(--cream);height:48px;width:48px;border-radius:50%;display:grid;place-items:center}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;color:var(--green);margin-bottom:4px}h1{font-family:Georgia,serif;font-size:34px;font-weight:600;letter-spacing:-1px}.actions{display:flex;gap:8px}.quiet{border:1px solid var(--line);background:#fffcf5;border-radius:12px;padding:12px 16px;min-height:48px;font-weight:650;font-size:14px}.brief{display:flex;align-items:center;gap:16px;margin:20px 0 18px;border-top:1px solid var(--line);padding-top:18px;font-size:18px;line-height:1.6}.brief strong{color:var(--green)}.order{font-size:11px;letter-spacing:1.5px;font-weight:800;background:#e7ecdf;color:var(--green);padding:5px 9px;border-radius:5px;white-space:nowrap}.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:18px}.stat{background:#fffdf7;border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;gap:13px;padding:12px 20px}.stat .number{font-size:36px;font-weight:750;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--green)}.stat span:last-child{font-size:15px;font-weight:600}.worktop{background:#ead8b9;border:1px solid #d1b78f;border-radius:20px;padding:18px;box-shadow:0 7px 0 #d0b38a;display:grid;grid-template-columns:1.1fr 1fr .9fr;gap:14px;position:relative}.station{min-width:0;position:relative;text-align:center;border-radius:14px;background:rgba(255,253,246,.58);padding:15px 10px 12px;display:flex;flex-direction:column;align-items:center;transition:box-shadow .12s}.station h2{font-size:17px;font-weight:750}.sub{font-size:13px;color:#635441;margin-top:4px}.scene{width:100%;height:246px;position:relative;display:flex;align-items:center;justify-content:center}.tray{position:absolute;inset:24px 7px 16px;background:#e3d5bd;border:8px solid #f6eedf;border-radius:42% 42% 28% 28%;box-shadow:0 5px 0 #c5ad88,inset 0 0 0 2px #d8c6a9}.pile{position:absolute;inset:0}.cookie{border:none;background:none;padding:0;width:var(--cookie);height:var(--cookie);flex-shrink:0;display:grid;place-items:center;touch-action:none;border-radius:50%;filter:drop-shadow(0 3px 1px #66421b40);position:relative}.cookie svg{width:100%;height:100%;pointer-events:none}.pile .cookie{position:absolute;left:calc(var(--x) * 1%);top:calc(var(--y) * 1%);transform:translate(-50%,-50%) rotate(var(--r))}.cookie.selected{outline:4px solid #1681b1;outline-offset:1px;z-index:110!important}.cookie:hover{filter:drop-shadow(0 3px 3px #66421b66) brightness(1.04)}.drop-hover{box-shadow:inset 0 0 0 4px #398977;background:#f2f5dd}.ready .station[data-target]{box-shadow:inset 0 0 0 2px #509880}.ready .station.drop-hover{box-shadow:inset 0 0 0 4px #398977}.station-footer{min-height:48px;width:100%;display:flex;align-items:center;justify-content:center}.station-footer span{font-size:13px;color:#635441}.bag{position:relative;width:210px;height:215px;margin-top:15px;isolation:isolate;display:flex;align-items:center;justify-content:center}.bag:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(95deg,#c49b61,#e9c898 25%,#edd2a7 65%,#bc9258);clip-path:polygon(10% 0,90% 0,84% 17%,94% 90%,90% 100%,10% 100%,6% 90%,16% 17%);border-radius:16px}.bag:after{content:"";position:absolute;top:17px;left:23px;right:23px;height:12px;border-radius:50%;background:#89643b;box-shadow:0 -5px 0 #d4af7a;z-index:-1}.slots{display:grid;grid-template-columns:repeat(4,40px);gap:8px 3px;margin-top:30px}.slot{height:40px;width:40px;border:1.5px dashed #a48355;border-radius:50%;background:#e0bb87}.slot .cookie{width:40px;height:40px}.bag-empty .bag{opacity:.22}.bag-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:750;color:var(--green);pointer-events:none}.bag-label span:first-child{font-size:30px}.fill{font-weight:800;font-size:19px;color:var(--green);background:#fffaf0;padding:4px 15px;border:1px solid #d9c5a8;border-radius:20px;position:absolute;z-index:2;top:4px;left:50%;transform:translateX(-50%);white-space:nowrap}.plate{width:210px;height:178px;border-radius:50%;background:#fcfaf1;border:10px solid #f7f3e6;box-shadow:0 6px 0 #b6bfae,inset 0 0 0 2px #d4dfd0;display:grid;place-content:center;grid-template-columns:repeat(2,56px);gap:8px}.plate .placeholder{width:56px;height:56px;border:2px dashed #c3cbbb;border-radius:50%}.primary{min-height:48px;border:0;border-radius:12px;background:var(--green);color:white;padding:11px 20px;font-weight:700;font-size:15px}.primary:not(:disabled):hover{background:#19483e}.shelf-section{margin-top:26px;display:flex;gap:18px;align-items:center}.shelf-title{font-size:13px;color:var(--muted);width:94px;flex-shrink:0}.shelf-title strong{display:block;font-size:16px;color:var(--ink);margin-bottom:4px}.shelf{flex:1;min-height:84px;border-bottom:8px solid #b48d5c;display:flex;gap:10px;align-items:flex-end;padding:0 10px 8px;flex-wrap:wrap;background:linear-gradient(0deg,#e9dfcb66,transparent 70%)}.mini-bag{width:48px;height:61px;background:linear-gradient(90deg,#c49b61,#e4c394 45%,#c6a06e);clip-path:polygon(23% 0,77% 0,63% 20%,90% 40%,100% 91%,90% 100%,10% 100%,0 91%,10% 40%,37% 20%);display:flex;align-items:center;justify-content:center;position:relative;padding-top:14px;animation:arrive .3s ease-out}.mini-bag:before{content:"";position:absolute;top:12px;left:14px;right:14px;height:4px;background:var(--green)}.mini-bag span{background:#fff6dd;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px;font-weight:800}.shelf-empty{align-self:center;color:#857660;font-size:14px}.status{margin-top:18px;min-height:28px;text-align:center;font-size:15px;color:var(--green);font-weight:650}.status.done{background:var(--green);color:#fff;padding:15px;border-radius:12px}.help{font-size:12px;text-align:center;color:var(--muted);margin-top:5px}.ghost{position:fixed;pointer-events:none!important;z-index:1000;width:64px;height:64px;filter:drop-shadow(0 8px 5px #0004);transform:translate(-50%,-70%)}.ghost svg{width:100%;height:100%}dialog{border:1px solid var(--line);border-radius:20px;padding:26px;max-width:380px;width:90%;box-shadow:0 15px 80px #0003;background:var(--cream);color:var(--ink)}dialog::backdrop{background:#302c2570}dialog h2{font-family:Georgia,serif;font-size:27px}dialog p{margin:14px 0 22px;line-height:1.5}dialog .actions{justify-content:flex-end}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@keyframes arrive{from{transform:translateY(-14px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(min-width:900px) and (min-height:850px){main{padding-top:32px}.scene{height:290px}.bag{transform:scale(1.1)}.plate{transform:scale(1.1)}.brief{margin-top:26px;margin-bottom:24px}.worktop{padding:24px}.shelf-section{margin-top:32px}}
+@media(max-width:850px){main{padding:18px}.worktop{gap:8px;padding:12px}.stat{padding:12px;gap:9px}.stat span:last-child{font-size:13px}.scene{height:236px}.bag{width:185px}.slots{grid-template-columns:repeat(4,36px);gap:8px 3px}.slot,.slot .cookie{width:36px;height:36px}.plate{width:175px;height:161px}.shelf{gap:7px}.mini-bag{width:42px}h1{font-size:30px}}
+@media(max-width:620px){main{padding:14px 12px}.brand-icon{display:none}header{gap:10px}h1{font-size:27px}.eyebrow{font-size:9px}.quiet{padding:10px;font-size:12px}.brief{font-size:15px;gap:10px;align-items:flex-start}.order{font-size:9px;margin-top:4px}.stats{gap:6px;margin-bottom:12px}.stat{flex-direction:column;gap:3px;padding:10px 3px;text-align:center}.stat .number{font-size:29px}.stat span:last-child{font-size:11px}.worktop{grid-template-columns:1fr 1fr;padding:8px;gap:8px}.station{padding:12px 6px 8px}.station h2{font-size:15px}.station.stock{grid-column:1/-1}.stock .scene{height:158px;max-width:370px}.stock .tray{inset:10px 0 10px}.stock .station-footer{display:none}.scene{height:220px}.bag{width:155px;height:187px}.slots{grid-template-columns:repeat(4,29px);gap:8px 3px}.slot,.slot .cookie{width:29px;height:29px}.plate{width:140px;height:155px;border-width:7px;grid-template-columns:repeat(2,48px);gap:6px}.plate .cookie,.plate .placeholder{width:48px;height:48px}.primary{font-size:13px;padding:10px 12px}.shelf-section{gap:8px}.shelf-title{width:64px;font-size:11px}.shelf-title strong{font-size:13px}.mini-bag{width:35px;height:48px}.mini-bag:before{left:10px;right:10px;top:9px}.mini-bag span{width:20px;height:20px;font-size:11px}.status{font-size:14px}.help{font-size:11px}.sub{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* Die komplette Arbeitsfläche passt sich als Einheit an den sichtbaren Viewport an. */
+html,body{width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
+body{position:fixed;inset:0}
+#viewport{position:fixed;inset:0;overflow:hidden;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+#stage{position:absolute;left:0;top:0;transform-origin:top left;touch-action:none;will-change:transform}
+/* Platz für alle zwölf Säcke reservieren: Beim Füllen springt die Ansicht nicht. */
+.shelf{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end;gap:8px;min-height:84px}
+.mini-bag{width:min(48px,100%);justify-self:center}
+.shelf-empty{grid-column:1/-1;align-self:center}
+.status,.status.done{min-height:60px;margin-top:18px;padding:12px 10px;display:flex;align-items:center;justify-content:center;border-radius:12px}
+.help{min-height:30px;line-height:1.5}
+@media(max-width:850px){.shelf{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:61px 61px;min-height:146px}.mini-bag{width:min(42px,100%)}.shelf-empty{grid-row:1/-1}}
+@media(max-width:620px){.shelf{grid-template-rows:48px 48px;min-height:120px}.mini-bag{width:min(35px,100%)}}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+<div class="awning" aria-hidden="true"></div>
+<main>
+<header><div class="brand"><div class="brand-icon" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21V14C0 12 5 3 11 6C12 0 22 0 23 6C30 4 34 13 25 15V25H8Z"/><path d="M8 21H25M12 25V29H22V25"/></svg></div><div><p class="eyebrow">HEUTE IN DER BACKSTUBE</p><h1>Die Keksbäckerei</h1></div></div><div class="actions"><button class="quiet" id="undo" disabled>↶ Zurück</button><button class="quiet" id="reset">Neu starten</button></div></header>
+<div class="brief"><span class="order">DER AUFTRAG</span><p>Packe <strong>8 Kekse in jeden Sack.</strong> Lege <strong>4 Kekse für die Bäcker</strong> zurück.</p></div>
+<div class="stats" aria-label="Übersicht"><div class="stat"><span class="number" id="remaining">100</span><span>Kekse übrig</span></div><div class="stat"><span class="number" id="full">0</span><span>Volle Säcke</span></div><div class="stat"><span class="number" id="reserved">0 / 4</span><span>Für die Bäcker</span></div></div>
+<div class="worktop" id="worktop">
+<section class="station stock" data-target="pile" tabindex="0" role="group" aria-label="Kekshaufen: Keks auswählen oder hier zurücklegen"><h2>Frisch gebacken</h2><div class="scene"><div class="tray" aria-hidden="true"></div><div class="pile" id="pile"></div></div><div class="station-footer"></div></section>
+<section class="station" data-target="bag" tabindex="0" role="group" aria-label="Sack: ausgewählten Keks hineinlegen"><h2>In den Sack</h2><div class="scene" id="bag-scene"><div class="fill" id="fill">0 / 8</div><div class="bag"><div class="slots" id="slots"></div></div><div class="bag-label" id="bag-label" hidden></div></div><div class="station-footer"><button class="primary" id="new-bag" disabled>Neuen Sack nehmen</button></div></section>
+<section class="station" data-target="plate" tabindex="0" role="group" aria-label="Bäckerteller: ausgewählten Keks ablegen"><h2>Für die Bäcker</h2><div class="scene"><div class="plate" id="plate"></div></div><div class="station-footer"></div></section>
+</div>
+<div class="shelf-section"><div class="shelf" id="shelf" aria-label="Regal mit vollen Säcken"></div></div>
+<p class="status" id="status" role="status" aria-live="polite">Ziehe einen Keks in den Sack oder auf den Teller.</p>
+<p class="help">Auch möglich: Keks antippen, dann Sack oder Teller antippen.</p>
+</main>
+</div></div>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Noch einmal von vorn?</h2><p>Alle 100 Kekse kommen zurück auf den Haufen.</p><div class="actions"><button class="quiet" id="cancel-reset">Weiterbacken</button><button class="primary" id="confirm-reset">Neu starten</button></div></dialog>
+<noscript>Bitte aktiviere JavaScript, um die Kekse zu verpacken.</noscript>
+<script>
+'use strict';
+// Eine eigenständige Offline-Datei: keine Bibliotheken, keine externen Anfragen.
+const $=id=>document.getElementById(id);
+const cookieSVG='<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3C39 2 41 6 47 7C51 8 52 13 56 17C60 22 59 27 61 32C61 38 57 42 55 48C51 53 46 54 42 58C36 61 31 59 25 60C19 58 16 56 11 53C8 49 6 44 4 40C1 33 4 28 4 23C6 18 9 15 12 10C18 7 24 2 32 3Z" fill="#d69b4d" stroke="#ac7234" stroke-width="1.5"/><path d="M31 7C43 6 55 17 56 29C59 42 47 54 34 56C19 57 8 46 8 32C8 18 17 8 31 7Z" fill="#edbd70"/><g fill="#75472f"><path d="M18 15l7 1 1 6-6 3-5-4Z"/><path d="M39 12l6 4-2 6-7-1Z"/><path d="M28 29l7-3 5 6-4 5-7-1Z"/><path d="M13 35l7-3 3 5-4 7-6-3Z"/><path d="M43 37l7-2 1 7-6 3-4-4Z"/><path d="M29 46l6-2 3 6-6 3-5-3Z"/></g><g fill="#c99249"><circle cx="31" cy="16" r="1.5"/><circle cx="46" cy="28" r="1.5"/><circle cx="21" cy="29" r="1.4"/><circle cx="26" cy="41" r="1.4"/><circle cx="42" cy="49" r="1.2"/></g></svg>';
+let state={pile:100,bag:0,plate:0,full:0},history=[],selected=null,drag=null,suppressClick=false;
+const finished=()=>state.pile===0&&state.plate===4&&state.full===12;
+const save=()=>history.push({...state});
+function say(message){$('status').textContent=message;}
+function cookie(source,index){const b=document.createElement('button');b.className='cookie';b.type='button';b.dataset.source=source;b.dataset.index=index;b.setAttribute('aria-label',source==='pile'?'Keks vom Haufen nehmen':source==='bag'?'Keks aus dem Sack nehmen':'Keks vom Bäckerteller nehmen');b.innerHTML=cookieSVG;if(selected&&selected.source===source&&selected.index===index)b.classList.add('selected');return b;}
+function render(message){
+ $('remaining').textContent=state.pile;$('full').textContent=state.full;$('reserved').textContent=state.plate+' / 4';
+ $('fill').textContent=state.bag===null?'Voll!':state.bag+' / 8';$('fill').hidden=state.bag===null;
+ $('bag-scene').classList.toggle('bag-empty',state.bag===null);$('bag-label').style.display=state.bag===null?'flex':'none';
+ $('bag-label').innerHTML=finished()?'<span>✓</span><span>Alles verpackt!</span>':'<span>✓</span><span>Sack im Regal!</span>';
+ $('new-bag').disabled=state.bag!==null||finished();$('undo').disabled=history.length===0;
+ $('worktop').classList.toggle('ready',!!selected);
+ const pile=document.createDocumentFragment();
+ for(let i=0;i<state.pile;i++){const b=cookie('pile',i);const row=Math.floor(i/10),col=i%10;b.style.setProperty('--x',14+col*7.7+Math.sin(i*13)*2);b.style.setProperty('--y',24+row*5.2+Math.cos(i*7)*3);b.style.setProperty('--r',((i*47)%90-45)+'deg');b.style.zIndex=i+1;pile.append(b);}
+ $('pile').replaceChildren(pile);$('slots').replaceChildren();
+ for(let i=0;i<8;i++){const slot=document.createElement('div');slot.className='slot';if(i<(state.bag??0))slot.append(cookie('bag',i));$('slots').append(slot);}
+ $('plate').replaceChildren();for(let i=0;i<4;i++){if(i<state.plate)$('plate').append(cookie('plate',i));else{const p=document.createElement('div');p.className='placeholder';p.setAttribute('aria-hidden','true');$('plate').append(p);}}
+ // Vorhandene Säcke bleiben beim Rendern stehen, damit nur neue animiert werden.
+ const shelf=$('shelf');if(shelf.querySelector('.shelf-empty'))shelf.replaceChildren();
+ while(shelf.children.length>state.full)shelf.lastElementChild.remove();
+ while(shelf.children.length<state.full){const b=document.createElement('div');b.className='mini-bag';b.setAttribute('role','img');b.setAttribute('aria-label','Voller Sack '+(shelf.children.length+1)+' mit 8 Keksen');b.innerHTML='<span>8</span>';shelf.append(b);}
+ if(!state.full)shelf.innerHTML='<span class="shelf-empty">Hier stehen bald deine vollen Säcke.</span>';
+ $('status').classList.toggle('done',finished());
+ if(finished())say('Geschafft! 12 volle Säcke und 4 Kekse für die Bäcker.');else if(message)say(message);
+}
+function transfer(source,target){
+ selected=null;
+ if(source===target){render('Der Keks bleibt an seinem Platz.');return;}
+ if(!['pile','bag','plate'].includes(source)||!['pile','bag','plate'].includes(target)||!(state[source]>0)){render();return;}
+ if(target==='bag'&&state.bag===null){render('Nimm zuerst einen neuen Sack.');return;}
+ if(target==='plate'&&state.plate>=4){render('Für die Bäcker liegen schon 4 Kekse bereit.');return;}
+ save();state[source]--;state[target]++;
+ let message=target==='bag'?'Im Sack: '+state.bag+' von 8 Keksen.':target==='plate'?'Für die Bäcker: '+state.plate+' von 4 Keksen.':'Der Keks liegt wieder auf dem Haufen.';
+ if(state.bag===8){state.bag=null;state.full++;message='Sack voll! Nimm einen neuen Sack.';if(state.pile===4-state.plate)message='Sack voll! Lege die übrigen Kekse für die Bäcker zurück.';}
+ render(message);
+}
+function clearDrag(){if(!drag)return;drag.ghost?.remove();document.querySelectorAll('.drop-hover').forEach(e=>e.classList.remove('drop-hover'));try{drag.button.releasePointerCapture(drag.id);}catch(_){}drag=null;}
+function targetAt(x,y){return document.elementFromPoint(x,y)?.closest('[data-target]')||null;}
+document.addEventListener('pointerdown',e=>{
+ suppressClick=false;const b=e.target.closest('.cookie');if(!b||drag||!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0))return;
+ drag={id:e.pointerId,button:b,source:b.dataset.source,index:Number(b.dataset.index),x:e.clientX,y:e.clientY,moved:false,ghost:null};b.setPointerCapture(e.pointerId);
+});
+document.addEventListener('pointermove',e=>{
+ if(!drag||e.pointerId!==drag.id)return;if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<8)return;
+ e.preventDefault();if(!drag.moved){drag.moved=true;drag.ghost=document.createElement('div');drag.ghost.className='ghost';drag.ghost.innerHTML=cookieSVG;drag.ghost.setAttribute('aria-hidden','true');document.body.append(drag.ghost);}
+ drag.ghost.style.left=e.clientX+'px';drag.ghost.style.top=e.clientY+'px';
+ const target=targetAt(e.clientX,e.clientY);document.querySelectorAll('[data-target]').forEach(s=>s.classList.toggle('drop-hover',s===target));
+},{passive:false});
+document.addEventListener('pointerup',e=>{
+ if(!drag||e.pointerId!==drag.id)return;const d=drag,target=targetAt(e.clientX,e.clientY)?.dataset.target;clearDrag();
+ if(d.moved){suppressClick=true;if(target)transfer(d.source,target);else{selected=null;render('Der Keks bleibt an seinem Platz.');}}
+});
+document.addEventListener('pointercancel',e=>{if(drag?.id===e.pointerId)clearDrag();});
+window.addEventListener('blur',clearDrag);
+document.addEventListener('click',e=>{
+ if(suppressClick){suppressClick=false;return;}
+ const b=e.target.closest('.cookie'),target=e.target.closest('[data-target]');
+ if(b){const source=b.dataset.source,index=Number(b.dataset.index);if(selected&&selected.source!==source){transfer(selected.source,source);return;}selected=selected?.source===source&&selected.index===index?null:{source,index};render(selected?'Keks ausgewählt. Tippe auf den Sack oder den Teller.':'Auswahl aufgehoben.');return;}
+ if(target&&selected&&!e.target.closest('#new-bag'))transfer(selected.source,target.dataset.target);
+});
+document.querySelectorAll('[data-target]').forEach(zone=>zone.addEventListener('keydown',e=>{if(e.target===zone&&(e.key==='Enter'||e.key===' ')){e.preventDefault();if(selected)transfer(selected.source,zone.dataset.target);}}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){clearDrag();selected=null;render('Auswahl aufgehoben.');}});
+$('new-bag').addEventListener('click',()=>{if(state.bag!==null||finished())return;save();state.bag=0;selected=null;render('Ein neuer Sack ist bereit.');});
+$('undo').addEventListener('click',()=>{if(!history.length)return;clearDrag();state=history.pop();selected=null;render('Letzter Schritt zurückgenommen.');});
+$('reset').addEventListener('click',()=>{$('reset-dialog').showModal();$('cancel-reset').focus();});
+$('cancel-reset').addEventListener('click',()=>$('reset-dialog').close());
+$('confirm-reset').addEventListener('click',()=>{clearDrag();state={pile:100,bag:0,plate:0,full:0};history=[];selected=null;$('reset-dialog').close();render('Ziehe einen Keks in den Sack oder auf den Teller.');});
+render();
+
+// Transformationen verändern nur die Darstellung. Pointer-Koordinaten und
+// elementFromPoint bleiben Bildschirmkoordinaten: Ziehen funktioniert bei jeder Skalierung.
+const viewport=$('viewport'),stage=$('stage');
+let fitFrame=0;
+function fitToScreen(){
+ fitFrame=0;
+ const visual=window.visualViewport;
+ const width=visual?visual.width:window.innerWidth;
+ const height=visual?visual.height:window.innerHeight;
+ const safe=getComputedStyle(viewport);
+ const left=parseFloat(safe.paddingLeft)||0,right=parseFloat(safe.paddingRight)||0;
+ const top=parseFloat(safe.paddingTop)||0,bottom=parseFloat(safe.paddingBottom)||0;
+ const availableWidth=Math.max(1,width-left-right);
+ const availableHeight=Math.max(1,height-top-bottom);
+ // Auf sehr kleinen Displays bleibt das Layout lesbar aufgebaut und wird als Ganzes verkleinert.
+ const designWidth=Math.min(1200,Math.max(360,availableWidth));
+ stage.style.width=designWidth+'px';
+ const designHeight=Math.max(1,stage.scrollHeight,stage.offsetHeight);
+ const scale=Math.min(availableWidth/designWidth,availableHeight/designHeight);
+ stage.style.transform='scale('+scale+')';
+ stage.style.left=((visual?.offsetLeft||0)+left+(availableWidth-designWidth*scale)/2)+'px';
+ stage.style.top=((visual?.offsetTop||0)+top+(availableHeight-designHeight*scale)/2)+'px';
+}
+function scheduleFit(){if(!fitFrame)fitFrame=requestAnimationFrame(fitToScreen);}
+window.addEventListener('resize',scheduleFit);
+window.addEventListener('orientationchange',()=>{clearDrag();scheduleFit();});
+window.visualViewport?.addEventListener('resize',scheduleFit);
+window.visualViewport?.addEventListener('scroll',scheduleFit);
+if(typeof ResizeObserver!=='undefined')new ResizeObserver(scheduleFit).observe(stage);
+if(document.fonts)document.fonts.ready.then(scheduleFit);
+fitToScreen();
+</script>
+</body>
+</html>
